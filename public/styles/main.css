@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #4CAF50; /* Choose a color you like */
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  #left{
+    float:left;
+    width:30%
+  }
+  #right{
+    float:right;
+    width:70%;
+  }
+  
+  .container {
+    display: flex;
+    margin-left: 70px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Takes up the remaining space */
+    padding: 20px; /* Optional: Adds padding around the content */
+  }
+  
+  .center-form {
+    width: 300px; /* or any width you prefer */
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 590px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Add some space below the form */
+  }
+  
+  table {
+    margin-top: 60px;
+    margin-left: 500px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px; /* Set a max width for the table */
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #f4f4f4;
+  }
+  
+  
+  
+button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: teal;
+    /* float: right;
+    margin-bottom: -100px; */
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <header class="header">
+    <h1>My To-Do List</h1>
+  </header
+
+  <div class="container">
+    <div id="left">
+  <form class="center-form" action="/add" method="post">
+    <label for="task">Task:</label>
+    <input type="text" name="task" autofocus placeholder="<%= locals.error ? error :  'Enter your task'%>">
+
+   
+      <label for="time">Time:</label>
+      <input type="text" id="time" name="time" required>
+      <button type="submit">Add Task</button>
+  </form>
+  </div>
+  <div id="right">
+  <table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% todoo.forEach(function(task) { %>
+            <tr> 
+                <td><%= task.task_list %></td>
+                <td><%= task.task_time %></td>
+                <td>
+                <form action="/delete" method="post" >
+                  <input type="hidden" name="task" value="<%= task.task_list %>">
+                  <button type="submit">Remove</button>
+                </form>
+              </td>
+            </tr>
+            
+        <% }); %>
+    </tbody>
+  </div>
+</table>
+</div>
+</body>
+  
+ </html>
